@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Security headers set via meta tag.
+        Note: for full protection (X-Frame-Options, X-Content-Type-Options,
+        Referrer-Policy, Permissions-Policy, HSTS), these should also be
+        set as real HTTP response headers by whatever is hosting this site
+        (Netlify, Vercel, GitHub Pages + Cloudflare, Apache/Nginx, etc.),
+        since some headers cannot be set via <meta> at all.
+    -->
+    <!--
+        connect-src whitelists the Google Apps Script domains so the
+        order form can POST the uploaded file to your Drive-upload
+        endpoint. It does NOT need to list your specific script URL —
+        just the two Google domains Apps Script Web Apps run on.
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self';
+                   style-src 'self' 'unsafe-inline';
+                   img-src 'self' data:;
+                   font-src 'self';
+                   connect-src 'self' https://script.google.com https://script.googleusercontent.com;
+                   form-action 'self';
+                   base-uri 'self';
+                   object-src 'none';
+                   frame-ancestors 'none';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>J-Net Zone Service</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <span>J-MAN</span> SERVICE
+            </a>
+
+            <nav class="navbar">
+
+                <a href="#home" data-mg="Fandraisana" data-fr="Accueil">Accueil</a>
+
+                <a href="#services"
+                   data-mg="Tolotra"
+                   data-fr="Services">
+                    Services
+                </a>
+
+                <a href="#order"
+                   data-mg="Hanafatra"
+                   data-fr="Commander">
+                    Order
+                </a>
+
+                <a href="#about"
+                   data-mg="Momba anay"
+                   data-fr="À propos">
+                    About
+                </a>
+
+                <a href="#contact"
+                   data-mg="Fifandraisana"
+                   data-fr="Contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-right">
+
+                <!-- LANGUAGE SWITCHER -->
+
+                <div class="language-switcher">
+
+                    <button
+                        id="frBtn"
+                        type="button">
+                        🇫🇷 Français
+                    </button>
+
+                    <button
+                        id="mgBtn"
+                        type="button">
+                        🇲🇬 Malagasy
+                    </button>
+
+                </div>
+
+
+                <a href="#order"
+                   class="nav-button"
+                   data-mg="Hanafatra Izao"
+                   data-fr="Commander">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title"
+                   data-mg="TONGA SOA ATO AMIN'NY"
+                   data-fr="BIENVENUE CHEZ">
+                    WELCOME TO
+                </p>
+
+
+                <h1>
+                    J-MAN
+                    <span>Service</span>
+                </h1>
+
+
+                <p class="hero-description"
+                   data-mg="Toerana azo itokisana ho an'ny fanontam-pirinty, ny kopia, ny scan, ny fanoratana lahatsoratra, ny sary ary ny tolotra maro hafa."
+                   data-fr="Votre centre de confiance pour l'impression, la photocopie, la numérisation, la saisie de documents, les services photo et bien plus encore.">
+
+                    Your trusted place for printing,
+                    photocopying, scanning, typing,
+                    photo services and more.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#order"
+                       class="btn primary-btn"
+                       data-mg="Hanafatra Tolotra"
+                       data-fr="Commander un service">
+                        Order a Service
+                    </a>
+
+
+                    <a href="#services"
+                       class="btn secondary-btn"
+                       data-mg="Jereo ny Tolotra"
+                       data-fr="Voir les services">
+                        View Services
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-icon">
+                    🖨️
+                </div>
+
+                <h3
+                    data-mg="Haingana sy Azo Itokisana"
+                    data-fr="Rapide & Fiable">
+                    Fast & Reliable
+                </h3>
+
+                <p
+                    data-mg="Tolotra matihanina momba ny taratasy sy ny nomerika, amin'ny vidiny mirary."
+                    data-fr="Des services professionnels de documents et numériques à des prix abordables.">
+
+                    Professional document and digital
+                    services at an affordable price.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SERVICES ================= -->
+
+<section id="services" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="small-title"
+               data-mg="IZAY ATOLOTRAY"
+               data-fr="NOS SERVICES">
+                WHAT WE OFFER
+            </p>
+
+            <h2
+                data-mg="Ny Tolotray"
+                data-fr="Nos Services">
+                Our Services
+            </h2>
+
+            <p
+                data-mg="Safidio ny tolotra ilainao ka hanafatra amin'ny fomba tsotra."
+                data-fr="Choisissez le service dont vous avez besoin et passez votre commande facilement.">
+                Choose the service you need and place your order easily.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- ================= PRINTING B&W ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">🖨️</div>
+
+                <h3
+                    data-mg="Fanontana Mainty sy Fotsy"
+                    data-fr="Impression N&B">
+                    Printing B&W
+                </h3>
+
+                <p
+                    data-mg="Fanontana taratasy mainty sy fotsy."
+                    data-fr="Impression de documents en noir et blanc.">
+                    Black & white document printing.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="300 Ar/pejy"
+                          data-fr="300 Ar/page">
+                        300 Ar/page
+                    </span>
+                </div>
+
+                <button
+                    data-service="Printing B&W"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= PRINTING COLOR ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">🖨️</div>
+
+                <h3
+                    data-mg="Fanontana Miloko"
+                    data-fr="Impression Couleur">
+                    Printing Color
+                </h3>
+
+                <p
+                    data-mg="Fanontana taratasy miloko, kalitao ambony."
+                    data-fr="Impression de documents en couleur de qualité.">
+                    High-quality color document printing.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="800 Ar/pejy"
+                          data-fr="800 Ar/page">
+                        800 Ar/page
+                    </span>
+                </div>
+
+                <button
+                    data-service="Printing Color"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= PHOTOCOPY B&W ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">📄</div>
+
+                <h3
+                    data-mg="Kopia Mainty sy Fotsy"
+                    data-fr="Photocopie N&B">
+                    Photocopy B&W
+                </h3>
+
+                <p
+                    data-mg="Kopia mazava, mainty sy fotsy."
+                    data-fr="Photocopies nettes en noir et blanc.">
+                    Clear black & white photocopies.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Manomboka amin'ny 200 Ar/pejy"
+                          data-fr="À partir de 200 Ar/page">
+                        From 200 Ar/page
+                    </span>
+                </div>
+
+                <button
+                    data-service="Photocopy B&W"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= PHOTOCOPY COLOR ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">📄</div>
+
+                <h3
+                    data-mg="Kopia Miloko"
+                    data-fr="Photocopie Couleur">
+                    Photocopy Color
+                </h3>
+
+                <p
+                    data-mg="Kopia miloko, kalitao tsara."
+                    data-fr="Photocopies couleur de qualité.">
+                    Quality color photocopies.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Manomboka amin'ny 500 Ar/pejy"
+                          data-fr="À partir de 500 Ar/page">
+                        From 500 Ar/page
+                    </span>
+                </div>
+
+                <button
+                    data-service="Photocopy Color"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= SCANNING ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">📑</div>
+
+                <h3
+                    data-mg="Scan"
+                    data-fr="Numérisation (scan)">
+                    Scanning
+                </h3>
+
+                <p
+                    data-mg="Manova taratasy ho rakitra nomerika."
+                    data-fr="Convertissez vos documents papier en fichiers numériques.">
+                    Convert paper documents into digital files.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Manomboka amin'ny 300 Ar/pejy"
+                          data-fr="À partir de 300 Ar/page">
+                        From 300 Ar/page
+                    </span>
+                </div>
+
+                <button
+                    data-service="Scanning"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= TYPING ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">⌨️</div>
+
+                <h3
+                    data-mg="Fanoratana"
+                    data-fr="Saisie de documents">
+                    Typing
+                </h3>
+
+                <p
+                    data-mg="Fanoratana matihanina taratasy sy taratasy isan-karazany."
+                    data-fr="Saisie professionnelle de documents et de lettres.">
+                    Professional typing of documents and letters.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="1 000 Ar/pejy"
+                          data-fr="1 000 Ar/page">
+                        1,000 Ar/page
+                    </span>
+                </div>
+
+                <button
+                    data-service="Typing"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= ID PHOTO ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">📸</div>
+
+                <h3
+                    data-mg="Sary Kara-panondro (4)"
+                    data-fr="Photo d'identité (4)">
+                    ID Photo (4)
+                </h3>
+
+                <p
+                    data-mg="Sary efatra ho an'ny kara-panondro, kalitao matihanina."
+                    data-fr="Quatre photos d'identité professionnelles.">
+                    Four professional ID photos.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Manomboka amin'ny 1 500 Ar"
+                          data-fr="À partir de 1 500 Ar">
+                        From 1,500 Ar
+                    </span>
+                </div>
+
+                <button
+                    data-service="ID Photo (4)"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= PHOTO PRINTING ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">🖼️</div>
+
+                <h3
+                    data-mg="Fanontana Sary"
+                    data-fr="Impression Photo">
+                    Photo Printing
+                </h3>
+
+                <p
+                    data-mg="Atontano ireo sary tianao indrindra."
+                    data-fr="Imprimez vos photos préférées.">
+                    Print your favorite photos.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="1 000 Ar"
+                          data-fr="1 000 Ar">
+                        1,000 Ar
+                    </span>
+                </div>
+
+                <button
+                    data-service="Photo Printing"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= CV ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">📋</div>
+
+                <h3
+                    data-mg="CV"
+                    data-fr="CV">
+                    CV
+                </h3>
+
+                <p
+                    data-mg="Famoronana CV matihanina ho an'ny fikarohan-tsampan'asa."
+                    data-fr="Création d'un CV professionnel pour votre recherche d'emploi.">
+                    Create a professional CV for your job search.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Manomboka amin'ny 1 500 Ar"
+                          data-fr="À partir de 1 500 Ar">
+                        From 1,500 Ar
+                    </span>
+                </div>
+
+                <button
+                    data-service="CV"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= COVER LETTER ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">✉️</div>
+
+                <h3
+                    data-mg="Taratasy Fangatahana"
+                    data-fr="Lettre de motivation">
+                    Cover Letter
+                </h3>
+
+                <p
+                    data-mg="Fanomanana taratasy fangatahana matihanina."
+                    data-fr="Préparation d'une lettre de motivation professionnelle.">
+                    Professional cover letter preparation.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Manomboka amin'ny 1 000 Ar"
+                          data-fr="À partir de 1 000 Ar">
+                        From 1,000 Ar
+                    </span>
+                </div>
+
+                <button
+                    data-service="Cover Letter"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= FORMATTING ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">📝</div>
+
+                <h3
+                    data-mg="Fandaminana Taratasy"
+                    data-fr="Mise en forme de documents">
+                    Document Formatting
+                </h3>
+
+                <p
+                    data-mg="Ataovy madio sy matihanina ny taratasinao."
+                    data-fr="Rendez vos documents propres et professionnels.">
+                    Make your documents clean and professional.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Arakaraka ny filana"
+                          data-fr="Sur demande">
+                        On request
+                    </span>
+                </div>
+
+                <button
+                    data-service="Document Formatting"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+            <!-- ================= DIGITAL SERVICES ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">💻</div>
+
+                <h3
+                    data-mg="Tolotra Nomerika"
+                    data-fr="Services numériques">
+                    Digital Services
+                </h3>
+
+                <p
+                    data-mg="Fanampiana amin'ny ordinatera sy tolotra nomerika hafa."
+                    data-fr="Assistance informatique et autres services numériques.">
+                    Computer assistance and other digital services.
+                </p>
+
+                <div class="service-price">
+                    <span data-mg="Arakaraka ny filana"
+                          data-fr="Sur demande">
+                        On request
+                    </span>
+                </div>
+
+                <button
+                    data-service="Digital Services"
+                    type="button"
+                    data-mg="Hanafatra"
+                    data-fr="Commander">
+                    Order
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ORDER ================= -->
+
+<section id="order" class="order-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="small-title"
+               data-mg="ATOMBOHY IZAO"
+               data-fr="COMMENCEZ MAINTENANT">
+                GET STARTED
+            </p>
+
+            <h2
+                data-mg="Manaova ny Filazanao"
+                data-fr="Passez votre commande">
+                Place Your Order
+            </h2>
+
+            <p
+                data-mg="Fenoy ny fomba etsy ambany ary lazao izay ilainao."
+                data-fr="Remplissez le formulaire ci-dessous et indiquez-nous ce dont vous avez besoin.">
+                Fill in the form below and tell us what you need.
+            </p>
+
+        </div>
+
+
+        <form id="orderForm" class="order-form" autocomplete="on" novalidate>
+
+            <!--
+                HONEYPOT FIELD (spam-bot trap).
+                Hidden from real users via CSS ("hp-field" in style.css),
+                but visible to most automated form-filling bots, which
+                tend to fill in every field they find. If this has a
+                value on submit, script.js silently drops the request.
+                tabindex/autocomplete prevent it interfering with real users.
+            -->
+            <div class="hp-field" aria-hidden="true">
+                <label for="website">Site web</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- FULL NAME -->
+
+            <div class="form-group">
+
+                <label
+                    for="name"
+                    data-mg="Anarana Feno"
+                    data-fr="Nom complet">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    maxlength="80"
+                    autocomplete="name"
+                    data-placeholder-mg="Soraty ny anaranao feno"
+                    data-placeholder-fr="Entrez votre nom complet"
+                    placeholder="Enter your full name">
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label
+                    for="phone"
+                    data-mg="Laharana Finday"
+                    data-fr="Numéro de téléphone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    maxlength="20"
+                    autocomplete="tel"
+                    pattern="[0-9+()\-\s]{6,20}"
+                    data-placeholder-mg="Soraty ny laharana findainao"
+                    data-placeholder-fr="Entrez votre numéro de téléphone"
+                    placeholder="Enter your phone number">
+
+            </div>
+
+
+            <!-- SERVICE -->
+
+            <div class="form-group">
+
+                <label
+                    for="service"
+                    data-mg="Safidio ny Tolotra"
+                    data-fr="Choisissez un service">
+                    Choose a Service
+                </label>
+
+                <select id="service" required>
+
+                    <option
+                        value=""
+                        data-mg="Safidio tolotra iray"
+                        data-fr="Sélectionnez un service">
+                        Select a service
+                    </option>
+
+                    <option
+                        value="Printing"
+                        data-mg="Fanontana Mainty sy Fotsy"
+                        data-fr="Impression N&B">
+                        Impression N&B
+                    </option>
+
+                    <option
+                        value="Printing"
+                        data-mg="Fanontana Miloko"
+                        data-fr="Impression Couleur">
+                        Impression Couleur
+                    </option>
+
+                    <option
+                        value="Photocopy"
+                        data-mg="Kopia Mainty sy Fotsy"
+                        data-fr="Photocopie N&B">
+                        Photocopy
+                    </option>
+
+                    <option
+                        value="Photocopy"
+                        data-mg="Kopia Miloko"
+                        data-fr="Photocopie Couleur">
+                        Photocopie Couleur
+                    </option>
+
+                    <option
+                        value="Scanning"
+                        data-mg="Scan"
+                        data-fr="Numérisation / scan">
+                        Scanning
+                    </option>
+
+                    <option
+                        value="Typing"
+                        data-mg="Fanoratana"
+                        data-fr="Saisie de documents">
+                        Typing
+                    </option>
+
+                    <option
+                        value="Photo Services"
+                        data-mg="Sary Kara-panondro (4)"
+                        data-fr="Photo d'identité (4)">
+                        ID Photo (4)
+                    </option>
+
+                    <option
+                        value="Photo Services"
+                        data-mg="Fanontana Sary"
+                        data-fr="Impression Photo">
+                        Impression Photo
+                    </option>
+
+                    <option
+                        value="CV & Cover Letter"
+                        data-mg="CV Matihanina"
+                        data-fr="CV Professionnel">
+                        CV
+                    </option>
+
+                    <option
+                        value="CV & Cover Letter"
+                        data-mg="Taratasy Fangatahana"
+                        data-fr="Lettre de motivation">
+                        Cover Letter
+                    </option>
+
+                    <option
+                        value="Document Formatting"
+                        data-mg="Fandaminana Taratasy"
+                        data-fr="Mise en forme de documents">
+                        Document Formatting
+                    </option>
+
+                    <option
+                        value="Digital Services"
+                        data-mg="Tolotra Nomerika"
+                        data-fr="Services numériques">
+                        Digital Services
+                    </option>
+
+                    <option
+                        value="Other"
+                        data-mg="Hafa"
+                        data-fr="Autre">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUANTITY + FORMAT -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label
+                        for="quantity"
+                        data-mg="Isa / Pejy"
+                        data-fr="Quantité / Pages">
+                        Quantity / Pages
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10000"
+                        step="1"
+                        data-placeholder-mg="ohatra 10"
+                        data-placeholder-fr="ex. 10"
+                        placeholder="e.g. 10">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        for="paper"
+                        data-mg="Taratasy / Endrika"
+                        data-fr="Papier / Format">
+                        Paper / Format
+                    </label>
+
+                    <select id="paper">
+
+                        <option
+                            value="Not specified"
+                            data-mg="Tsy voafaritra"
+                            data-fr="Non spécifié">
+                            Not specified
+                        </option>
+
+                        <option
+                            value="A4"
+                            data-mg="A4"
+                            data-fr="A4">
+                            A4
+                        </option>
+
+                        <option
+                            value="A3"
+                            data-mg="A3"
+                            data-fr="A3">
+                            A3
+                        </option>
+
+                        <option
+                            value="Photo"
+                            data-mg="Sary"
+                            data-fr="Photo">
+                            Photo
+                        </option>
+
+                        <option
+                            value="PDF"
+                            data-mg="PDF"
+                            data-fr="PDF">
+                            PDF
+                        </option>
+
+                        <option
+                            value="Other"
+                            data-mg="Hafa"
+                            data-fr="Autre">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDITIONAL INSTRUCTIONS -->
+
+            <div class="form-group">
+
+                <label
+                    for="message"
+                    data-mg="Toromarika Fanampiny"
+                    data-fr="Instructions supplémentaires">
+                    Additional Instructions
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    maxlength="1000"
+                    data-placeholder-mg="Lazao izay tokony ho fantatray hafa..."
+                    data-placeholder-fr="Indiquez toute autre information importante..."
+                    placeholder="Tell us anything else we should know...">
+                </textarea>
+
+            </div>
+
+
+            <!-- FILE -->
+
+            <div class="form-group">
+
+                <label
+                    for="file"
+                    data-mg="Hampakatra ny Rakitrao"
+                    data-fr="Téléchargez votre fichier">
+                    Upload Your File
+                </label>
+
+                <input
+                    type="file"
+                    id="file"
+                    name="file"
+                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+
+                <small
+                    id="fileHelp"
+                    data-mg="Tsy voatery. Ho apetraka amin'ny fomba azo antoka ny rakitrao ary hotehirizina ho an'ity filazana ity ihany."
+                    data-fr="Facultatif. Votre fichier sera téléversé de façon sécurisée et conservé uniquement pour cette commande.">
+
+                    Optional. Your file will be uploaded securely
+                    and stored for this order only.
+
+                </small>
+
+            </div>
+
+
+            <!--
+                UPLOAD / CONFIRMATION STATUS
+                Hidden by default (see style.css .order-status).
+                script.js toggles this while uploading, on success,
+                and on failure, instead of relying only on alert().
+            -->
+            <div id="orderStatus" class="order-status" role="status" aria-live="polite" hidden></div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-btn"
+                data-mg="Alefaso ny commande-nao"
+                data-fr="Envoyer la commande">
+
+                Send Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section about-section">
+
+        <div class="container about-content">
+
+            <div>
+
+                <p class="small-title"
+                   data-mg="MOMBA ANAY"
+                   data-fr="À PROPOS DE NOUS">
+                    ABOUT US
+                </p>
+
+                <h2
+                    data-mg="Manamora ny Asanao Isan'andro"
+                    data-fr="Nous facilitons vos tâches quotidiennes">
+
+                    Making Your Everyday Tasks Easier
+
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p
+                    data-mg="J-MAN Service dia foto-toerana manolotra tolotra maro momba ny taratasy, ny fanontana, ny sary ary ny nomerika, izay mora azo sy mirary vidiny."
+                    data-fr="J-MAN Service est un centre multiservices qui propose des services pratiques, accessibles et abordables dans les domaines des documents, de l'impression, de la photo et du numérique.">
+
+                    J-MAN Service is a multi-service center
+                    providing practical, accessible and affordable
+                    document, printing, photo and digital services.
+
+                </p>
+
+
+                <p
+                    data-mg="Na mila manontana taratasy ianao, na manao scan ny taratasinao, na mila kopia, na sary kara-panondro, na fanoratana lahatsoratra, dia vonona hanampy anao izahay."
+                    data-fr="Que vous ayez besoin d'imprimer un document, de scanner vos papiers, de faire des photocopies, de prendre une photo d'identité ou de saisir un document, nous sommes là pour vous aider.">
+
+                    Whether you need to print a document,
+                    scan your papers, make photocopies,
+                    take an ID photo or type a document,
+                    we're here to help.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="small-title"
+                   data-mg="MIFANDRAISA AMINAY"
+                   data-fr="CONTACTEZ-NOUS">
+                    GET IN TOUCH
+                </p>
+
+                <h2
+                    data-mg="Mifandraisa Aminay"
+                    data-fr="Contactez-nous">
+                    Contact Us
+                </h2>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card">
+
+                    <div>📱</div>
+
+                    <h3
+                        data-mg="Finday"
+                        data-fr="Téléphone">
+                        Phone
+                    </h3>
+
+                    <p>
+                        032 26 261 09
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <div>💬</div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p
+                        data-mg="Azo antenaina amin'ny filazana"
+                        data-fr="Disponible pour les commandes">
+                        Available for orders
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <div>📍</div>
+
+                    <h3
+                        data-mg="Toerana"
+                        data-fr="Adresse">
+                        Location
+                    </h3>
+
+                    <p>
+                        Ambondrona Secteur B3, Mahajanga
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <div>🕐</div>
+
+                    <h3
+                        data-mg="Ora Fisokafana"
+                        data-fr="Heures d'ouverture">
+                        Opening Hours
+                    </h3>
+
+                    <p
+                        data-mg="7:30 maraina – 5:00 hariva "
+                        data-fr="De 7h30 du matin à 17h00"> 
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h3>
+                J-MAN SERVICE
+            </h3>
+
+            <p
+                data-mg="Ny taratasinao. Ny vahaolanay."
+                data-fr="Vos documents. Nos solutions.">
+                Your documents. Our solutions.
+            </p>
+
+            <p class="copyright">
+                © 2026 J-MAN Service.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
