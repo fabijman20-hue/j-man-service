@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://j-man-service.fabijman20.workers.dev/sitemap.xml
